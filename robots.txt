@@ -1,12 +1,12 @@
 # Robots.txt for Magee Groundworks
-# https://rowbot1.github.io/mageegroundworks/
+# https://mageegroundworksltd.com/
 
 User-agent: *
 Allow: /
 Disallow: /images/Screenshot*.png
 
 # Sitemap location
-Sitemap: https://rowbot1.github.io/mageegroundworks/sitemap.xml
+Sitemap: https://mageegroundworksltd.com/sitemap.xml
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1
