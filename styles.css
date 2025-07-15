@@ -61,9 +61,10 @@ body {
 }
 
 .logo {
-    height: 50px;
+    height: 60px;
     width: auto;
     object-fit: contain;
+    display: block;
 }
 
 .nav-menu {
@@ -527,11 +528,11 @@ body {
 }
 
 .footer-logo {
-    height: 80px;
+    height: 100px;
     width: auto;
     object-fit: contain;
-    margin-bottom: 1rem;
-    filter: brightness(0) invert(1);
+    margin-bottom: 1.5rem;
+    display: block;
 }
 
 .footer-brand p {
@@ -617,6 +618,14 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .logo {
+        height: 45px;
+    }
+    
+    .footer-logo {
+        height: 80px;
+    }
+    
     .hamburger {
         display: flex;
     }
