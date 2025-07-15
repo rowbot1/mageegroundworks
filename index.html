@@ -509,29 +509,34 @@
                 </div>
                 <form class="contact-form">
                     <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
+                        <input type="text" name="name" placeholder="Your Name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
                     </div>
                     <div class="form-group">
-                        <input type="tel" placeholder="Your Phone">
+                        <input type="tel" name="phone" placeholder="Your Phone">
                     </div>
                     <div class="form-group">
-                        <select required>
+                        <select name="service" required>
                             <option value="">Select Service</option>
-                            <option value="foundations">Foundations</option>
-                            <option value="drainage">Drainage</option>
-                            <option value="site-clearance">Site Clearance</option>
-                            <option value="paving">Paving</option>
-                            <option value="fencing">Fencing</option>
-                            <option value="other">Other</option>
+                            <option value="Foundations">Foundations</option>
+                            <option value="Drainage">Drainage</option>
+                            <option value="Site Clearance">Site Clearance</option>
+                            <option value="Paving">Paving</option>
+                            <option value="Fencing">Fencing</option>
+                            <option value="Retaining Walls">Retaining Walls</option>
+                            <option value="Excavation">Excavation</option>
+                            <option value="Other">Other</option>
                         </select>
                     </div>
                     <div class="form-group full">
-                        <textarea rows="5" placeholder="Tell us about your project" required></textarea>
+                        <textarea name="message" rows="5" placeholder="Tell us about your project" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <button type="submit" class="btn btn-primary">Send Message via Facebook</button>
+                    <p style="font-size: 0.875rem; color: var(--gray-600); margin-top: 1rem; text-align: center;">
+                        <i class="fab fa-facebook-messenger"></i> You'll be redirected to Facebook Messenger to send your enquiry
+                    </p>
                 </form>
             </div>
         </div>

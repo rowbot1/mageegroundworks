@@ -82,11 +82,20 @@ contactForm.addEventListener('submit', (e) => {
     const formData = new FormData(contactForm);
     const data = Object.fromEntries(formData);
     
-    // Here you would normally send the data to a server
-    console.log('Form submitted:', data);
+    // Create message with all form details
+    const message = `New enquiry from website:\n\nName: ${data.name || 'Not provided'}\nEmail: ${data.email || 'Not provided'}\nPhone: ${data.phone || 'Not provided'}\nService: ${data.service || 'Not specified'}\nMessage: ${data.message || 'No message'}`;
+    
+    // Encode message for URL
+    const encodedMessage = encodeURIComponent(message);
+    
+    // Facebook Messenger link - using the page ID from the Facebook link in footer
+    const messengerLink = `https://m.me/100054419772372?text=${encodedMessage}`;
+    
+    // Open Facebook Messenger with pre-filled message
+    window.open(messengerLink, '_blank');
     
     // Show success message
-    alert('Thank you for your message! We will get back to you soon.');
+    alert('Thank you! Your message has been sent to our Facebook Messenger. We\'ll respond as soon as possible.');
     contactForm.reset();
 });
 
