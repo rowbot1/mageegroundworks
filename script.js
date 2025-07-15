@@ -73,23 +73,84 @@ document.querySelectorAll('.service-card, .gallery-item, .stat').forEach(el => {
     observer.observe(el);
 });
 
+// Form Security and Validation
+const sanitizeInput = (str) => {
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+};
+
+const validateEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
+};
+
+const validatePhone = (phone) => {
+    const re = /^[\d\s\-\+\(\)]+$/;
+    return re.test(phone) && phone.replace(/\D/g, '').length >= 10;
+};
+
+// Rate limiting for form submission
+let lastSubmitTime = 0;
+const RATE_LIMIT_MS = 10000; // 10 seconds
+
 // Form Submission
 const contactForm = document.querySelector('.contact-form');
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
     
+    // Rate limiting check
+    const now = Date.now();
+    if (now - lastSubmitTime < RATE_LIMIT_MS) {
+        alert('Please wait a moment before submitting again.');
+        return;
+    }
+    
     // Get form data
     const formData = new FormData(contactForm);
     const data = Object.fromEntries(formData);
     
-    // Create message with all form details
-    const message = `New enquiry from website:\n\nName: ${data.name || 'Not provided'}\nEmail: ${data.email || 'Not provided'}\nPhone: ${data.phone || 'Not provided'}\nService: ${data.service || 'Not specified'}\nMessage: ${data.message || 'No message'}`;
+    // Validate required fields
+    if (!data.name || data.name.trim().length < 2) {
+        alert('Please enter your name (at least 2 characters).');
+        return;
+    }
+    
+    if (!data.email || !validateEmail(data.email)) {
+        alert('Please enter a valid email address.');
+        return;
+    }
+    
+    if (data.phone && !validatePhone(data.phone)) {
+        alert('Please enter a valid phone number.');
+        return;
+    }
+    
+    if (!data.message || data.message.trim().length < 10) {
+        alert('Please enter a message (at least 10 characters).');
+        return;
+    }
+    
+    // Sanitize inputs
+    const sanitizedData = {
+        name: sanitizeInput(data.name.trim()),
+        email: sanitizeInput(data.email.trim()),
+        phone: sanitizeInput(data.phone?.trim() || 'Not provided'),
+        service: sanitizeInput(data.service || 'Not specified'),
+        message: sanitizeInput(data.message.trim())
+    };
+    
+    // Create message with sanitized form details
+    const message = `New enquiry from website:\n\nName: ${sanitizedData.name}\nEmail: ${sanitizedData.email}\nPhone: ${sanitizedData.phone}\nService: ${sanitizedData.service}\nMessage: ${sanitizedData.message}`;
     
     // Encode message for URL
     const encodedMessage = encodeURIComponent(message);
     
     // Facebook Messenger link - using the page ID from the Facebook link in footer
     const messengerLink = `https://m.me/100054419772372?text=${encodedMessage}`;
+    
+    // Update last submit time
+    lastSubmitTime = now;
     
     // Open Facebook Messenger with pre-filled message
     window.open(messengerLink, '_blank');
