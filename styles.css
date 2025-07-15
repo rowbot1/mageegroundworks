@@ -219,6 +219,44 @@ body {
     animation: bounce 2s infinite;
 }
 
+/* Trust Banner */
+.trust-banner {
+    background: var(--primary-color);
+    padding: 1.5rem 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.trust-items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: white;
+    font-weight: 600;
+}
+
+.trust-item i {
+    font-size: 1.25rem;
+}
+
+@media (max-width: 768px) {
+    .trust-items {
+        justify-content: center;
+    }
+    
+    .trust-item {
+        flex-basis: 45%;
+        justify-content: center;
+    }
+}
+
 /* Services Section */
 .services {
     padding: 5rem 0;
