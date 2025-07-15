@@ -156,46 +156,286 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Projects Gallery Section -->
     <section id="projects" class="projects">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Recent Projects</h2>
-                <p class="section-subtitle">Excellence in every groundwork project we undertake</p>
+                <h2 class="section-title">Our Work Gallery</h2>
+                <p class="section-subtitle">Browse our portfolio of completed groundwork projects</p>
             </div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-overlay">
-                            <h3>Residential Foundation</h3>
-                            <p>Complete foundation work for new family home</p>
-                        </div>
+            
+            <!-- Filter Buttons -->
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="foundations">Foundations</button>
+                <button class="filter-btn" data-filter="driveways">Driveways</button>
+                <button class="filter-btn" data-filter="retaining-walls">Retaining Walls</button>
+                <button class="filter-btn" data-filter="drainage">Drainage</button>
+                <button class="filter-btn" data-filter="excavation">Excavation</button>
+            </div>
+            
+            <div class="projects-gallery">
+                <!-- Foundations -->
+                <div class="gallery-item" data-category="foundations">
+                    <img src="images/concrete-foundation-grid-layout.jpeg" alt="Concrete foundation grid layout" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Foundation Grid Layout</h3>
+                        <p>Residential foundation preparation</p>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-overlay">
-                            <h3>Commercial Paving</h3>
-                            <p>Large-scale paving project for business park</p>
-                        </div>
+                <div class="gallery-item" data-category="foundations">
+                    <img src="images/concrete-pad-foundations-with-markers.jpeg" alt="Concrete pad foundations" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Pad Foundations</h3>
+                        <p>Commercial building foundations</p>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-overlay">
-                            <h3>Drainage System</h3>
-                            <p>Complex drainage solution for residential development</p>
-                        </div>
+                <div class="gallery-item" data-category="foundations">
+                    <img src="images/rebar-reinforcement-concrete-slab-preparation.jpeg" alt="Rebar reinforcement" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Reinforced Slab</h3>
+                        <p>Rebar reinforcement preparation</p>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-overlay">
-                            <h3>Site Preparation</h3>
-                            <p>Complete site clearance and preparation</p>
-                        </div>
+                
+                <!-- Driveways -->
+                <div class="gallery-item" data-category="driveways">
+                    <img src="images/gravel-driveway-near-white-house.jpeg" alt="Gravel driveway" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Gravel Driveway</h3>
+                        <p>Residential driveway installation</p>
                     </div>
                 </div>
+                <div class="gallery-item" data-category="driveways">
+                    <img src="images/curved-gravel-driveway-entrance.jpeg" alt="Curved driveway entrance" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Curved Entrance</h3>
+                        <p>Custom curved driveway design</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="driveways">
+                    <img src="images/excavator-working-on-gravel-driveway.jpeg" alt="Driveway construction" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Driveway Construction</h3>
+                        <p>Professional gravel laying</p>
+                    </div>
+                </div>
+                
+                <!-- Retaining Walls -->
+                <div class="gallery-item" data-category="retaining-walls">
+                    <img src="images/terraced-retaining-wall-construction-site.jpeg" alt="Terraced retaining wall" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Terraced Wall System</h3>
+                        <p>Multi-level retaining structure</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="retaining-walls">
+                    <img src="images/stepped-retaining-wall-with-excavator.jpeg" alt="Stepped retaining wall" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Stepped Wall Design</h3>
+                        <p>Functional stepped retaining wall</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="retaining-walls">
+                    <img src="images/retaining-wall-with-steps-and-excavator.jpeg" alt="Retaining wall with steps" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Wall with Steps</h3>
+                        <p>Integrated steps and wall system</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="retaining-walls">
+                    <img src="images/excavator-building-block-retaining-wall.jpeg" alt="Block wall construction" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Block Wall Build</h3>
+                        <p>Precision block wall construction</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="retaining-walls">
+                    <img src="images/retaining-wall-construction-with-blocks.jpeg" alt="Block retaining wall" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Block Retaining Wall</h3>
+                        <p>Durable block wall system</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="retaining-walls">
+                    <img src="images/raised-block-planter-wall-construction.jpeg" alt="Raised planter wall" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Raised Planter Wall</h3>
+                        <p>Decorative raised planter</p>
+                    </div>
+                </div>
+                
+                <!-- Excavation -->
+                <div class="gallery-item" data-category="excavation">
+                    <img src="images/excavated-red-clay-construction-site.jpeg" alt="Excavation site" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Site Excavation</h3>
+                        <p>Clay excavation project</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="excavation">
+                    <img src="images/excavator-and-concrete-steps-construction.jpeg" alt="Excavator at work" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Excavation Works</h3>
+                        <p>Precision excavation services</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="excavation">
+                    <img src="images/cleared-site-with-worker-view.jpeg" alt="Cleared construction site" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Site Clearance</h3>
+                        <p>Complete site preparation</p>
+                    </div>
+                </div>
+                
+                <!-- Mixed Projects -->
+                <div class="gallery-item" data-category="foundations">
+                    <img src="images/concrete-base-with-mesh-reinforcement-cottage.jpeg" alt="Mesh reinforced base" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Reinforced Base</h3>
+                        <p>Mesh reinforced foundation</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="drainage">
+                    <img src="images/dump-truck-with-wood-debris.jpeg" alt="Site clearance" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Site Clearance</h3>
+                        <p>Debris removal services</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="foundations">
+                    <img src="images/gravel-base-construction-with-power-float.jpeg" alt="Gravel base construction" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Base Preparation</h3>
+                        <p>Power float finishing</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="excavation">
+                    <img src="images/construction-site-with-block-wall-materials.jpeg" alt="Construction materials" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Material Staging</h3>
+                        <p>Organized site management</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="foundations">
+                    <img src="images/concrete-pad-with-excavators-and-markers.jpeg" alt="Concrete pad work" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Pad Construction</h3>
+                        <p>Multi-excavator operation</p>
+                    </div>
+                </div>
+                
+                <!-- Additional Projects -->
+                <div class="gallery-item" data-category="foundations">
+                    <img src="images/foundation-excavation-with-concrete-forms.jpeg" alt="Foundation excavation" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Foundation Forms</h3>
+                        <p>Concrete form installation</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="foundations">
+                    <img src="images/excavator-and-concrete-foundation-pad.jpeg" alt="Foundation pad construction" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Foundation Pad</h3>
+                        <p>Heavy-duty foundation work</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="driveways">
+                    <img src="images/gravel-courtyard-with-cobblestone.jpeg" alt="Gravel courtyard" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Courtyard Design</h3>
+                        <p>Gravel and cobblestone mix</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="driveways">
+                    <img src="images/gravel-driveway-with-roller-compactor.jpeg" alt="Driveway compaction" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Driveway Compaction</h3>
+                        <p>Professional roller finishing</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="driveways">
+                    <img src="images/marked-parking-lot-sunset-construction.jpeg" alt="Parking lot construction" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Parking Area</h3>
+                        <p>Commercial parking development</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="driveways">
+                    <img src="images/parking-spaces-with-excavator-scenic-view.jpeg" alt="Parking spaces construction" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Parking Layout</h3>
+                        <p>Scenic parking area creation</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="drainage">
+                    <img src="images/drainage-channel-with-concrete-blocks.jpeg" alt="Drainage channel" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Drainage Channel</h3>
+                        <p>Block-lined drainage system</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="excavation">
+                    <img src="images/excavator-bucket-construction-site-hills.jpeg" alt="Hillside excavation" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Hillside Work</h3>
+                        <p>Challenging terrain excavation</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="excavation">
+                    <img src="images/excavator-on-dirt-site-clearing.jpeg" alt="Site clearing work" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Site Clearing</h3>
+                        <p>Full site preparation service</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="excavation">
+                    <img src="images/hillside-construction-site-overview.jpeg" alt="Hillside construction" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Hillside Development</h3>
+                        <p>Large-scale hillside project</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="excavation">
+                    <img src="images/house-demolition-with-excavators.jpeg" alt="Demolition work" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Demolition Services</h3>
+                        <p>Safe structural demolition</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="foundations">
+                    <img src="images/house-extension-construction-blocks.jpeg" alt="House extension" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Extension Work</h3>
+                        <p>Residential extension project</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="excavation">
+                    <img src="images/aerial-view-concrete-pump-truck-construction.jpeg" alt="Aerial construction view" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Large Scale Project</h3>
+                        <p>Concrete pumping operation</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="excavation">
+                    <img src="images/cameaud-crane-truck-on-residential-street.jpeg" alt="Crane operations" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Heavy Equipment</h3>
+                        <p>Specialized crane services</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="retaining-walls">
+                    <img src="images/retaining-wall-construction-blocks.jpeg" alt="Block wall construction" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Block Wall System</h3>
+                        <p>Professional wall construction</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- View More Button -->
+            <div class="gallery-footer">
+                <button class="btn btn-outline" id="loadMoreBtn">Load More Projects</button>
             </div>
         </div>
     </section>
