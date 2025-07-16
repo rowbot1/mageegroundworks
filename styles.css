@@ -80,11 +80,42 @@ html {
 }
 
 .brand-name {
-    font-size: 1.75rem;
+    font-size: 2rem;
     font-weight: 800;
-    color: var(--dark-color);
-    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, var(--dark-color) 0%, var(--primary-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 0.5px;
     line-height: 1;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: inline-block;
+    animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.brand-name {
+    background-size: 200% 200%;
+}
+
+.brand-name::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary-color) 0%, transparent 100%);
+    opacity: 0.6;
 }
 
 .brand-tagline {
@@ -767,7 +798,11 @@ html {
     }
     
     .brand-name {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
+    }
+    
+    .brand-name::after {
+        height: 1px;
     }
     
     .brand-tagline {
